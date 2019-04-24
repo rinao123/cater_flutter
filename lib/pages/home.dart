@@ -21,7 +21,7 @@ class _HomeState extends State<Home> {
                 child: Stack(
                     children: <Widget>[
                         Positioned(
-                            top: Utils.px2dp(150),
+                            top: Utils.px2dp(100 + Utils.getScreenHeight()* 0.075),
                             left: Utils.px2dp(100),
                             child: Text(
                                 "5852991/吾系庄庄",
@@ -33,7 +33,7 @@ class _HomeState extends State<Home> {
                             )
                         ),
                         Positioned(
-                            top: Utils.px2dp(216),
+                            top: Utils.px2dp(140 + Utils.getScreenHeight()* 0.09),
                             left: Utils.px2dp(105),
                             child: Text(
                                 "13660467470",
@@ -44,7 +44,7 @@ class _HomeState extends State<Home> {
                             )
                         ),
                         Positioned(
-                            top: Utils.px2dp(350),
+                            top: Utils.px2dp(150 + Utils.getScreenHeight()* 0.2),
                             left: Utils.px2dp(0),
                             child: Container(
                                 width: Utils.getScreenWidth(),
