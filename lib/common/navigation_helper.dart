@@ -1,3 +1,4 @@
+import "package:flutter/cupertino.dart";
 import "package:flutter/widgets.dart";
 import "package:flutter_app/pages/goods_detail.dart";
 import "package:flutter_app/pages/home.dart";
@@ -55,21 +56,11 @@ class NavigationHelper {
             print("navigateTo page is null");
             return;
         }
-        Navigator.push(context, PageRouteBuilder(
-            opaque: false,
-            pageBuilder: (BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation) {
+        Navigator.push(context, CupertinoPageRoute(
+            builder: (BuildContext context){
                 return page;
-            },
-            transitionsBuilder: (BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation, Widget child) {
-                return SlideTransition(
-                    position: Tween<Offset>(
-                        begin: Offset(1.0, 0.0),
-                        end: Offset(0.0, 0.0),
-                    ).animate(animation),
-                    child: child,
-                );
-            })
-        );
+            }
+        ));
     }
 
     static void redirect(BuildContext context, String url) {
